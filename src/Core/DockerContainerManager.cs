@@ -287,8 +287,9 @@ namespace Squadron
             {
                 PublishAllPorts = true,
                 Memory = _settings.Memory,
-                PortBindings = new Dictionary<string, IList<PortBinding>>(),
-                Binds = _settings.Volumes
+                PortBindings = new Dictionary<string, IList<PortBinding>>(),    
+                Binds = _settings.Volumes,
+                ExtraHosts = _settings.ExtraHosts
             };
 
             var allPorts = new List<ContainerPortMapping>

@@ -89,6 +89,13 @@ namespace Squadron
             return this;
         }
 
+        public ContainerResourceBuilder AddExtraHost(string mapping)
+        {
+            _options.ExtraHosts.Add(mapping);
+
+            return this;
+        }
+
         /// <summary>
         /// Container image tag
         /// </summary>

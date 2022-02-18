@@ -128,6 +128,12 @@ namespace Squadron
         /// </value>
         public Func<DockerConfiguration> DockerConfigResolver { get; internal set; }
 
+        /// <summary>
+        /// The extra host entries that the container should be configured with
+        /// </summary>
+        public IList<string> ExtraHosts { get; internal set; } =
+            new List<string>();
+
         internal Logger Logger { get; set; }
     }
 }
